@@ -6,11 +6,12 @@ import 'dotenv/config';
 const mongoUri = process.env.Mongo_Url;
 
 
-mongoose.connect(mongoUri).then(() => {
-    console.log('Database is connected');
-});
+// connecting to our db
+
+export const dbConnection = ()=>{
+    mongoose.connect(mongoUri).then(() => {
+        console.log('Database is connected');
+    }) 
+};
 
 
-
-
-export default mongoUri;

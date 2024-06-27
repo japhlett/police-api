@@ -1,11 +1,15 @@
 import express from "express";
-import statementRouter from "./routes/statement.js";
-import mongoUri from "./config/db.js";
+import {statementRouter}  from "./routes/statement.js";
+import {dbConnection} from "./config/db.js";
 import 'dotenv/config';
 // creating a server
 const police_app = express();
 
+dbConnection();
 
+
+// 
+police_app.use(express.json());
 // telling the server to use the routes
 police_app.use(statementRouter);
 
