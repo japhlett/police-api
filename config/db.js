@@ -3,7 +3,7 @@ import 'dotenv/config';
 
 
 
-const mongoUri = process.env.Mongo_Url;
+const mongoUri = process.env.Mongo_url;
 
 
 // connecting to our db
@@ -13,5 +13,6 @@ export const dbConnection = ()=>{
         console.log('Database is connected');
     }) 
 };
+
 
 
