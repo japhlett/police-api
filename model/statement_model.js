@@ -11,10 +11,10 @@ const statementSchema = new Schema ({
     statement: {type:String},
     caseStatus: {type:String,
         enum:['open','closed','pending']
-    },
-    civilianId: {type:String},
-    createdAt: {type:Date, default:Date.now()},
-    updatedAt: {type:Date, default:Date.now()}
+    }
+   
+},{
+    timestamps:true
 });
 
 export const statementModel = model('Statement',statementSchema);
